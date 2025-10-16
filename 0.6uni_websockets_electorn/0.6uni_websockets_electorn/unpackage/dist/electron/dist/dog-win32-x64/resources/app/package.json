@@ -1,0 +1,26 @@
+{
+  "name": "electron-main",
+  "version": "1.0.0",
+  "description": "dog",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-packager ./ dog --platform=win32 --arch=x64 --out=./dist --overwrite --icon=./static/logo.png"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron/packager": "^18.4.2",
+    "electron": "^37.3.1"
+  },
+  "build": {
+    "extraResources": [
+      {
+        "from": "resources/python",
+        "to": "python",
+        "filter": ["**/*"]
+      }
+    ]
+  }
+}
